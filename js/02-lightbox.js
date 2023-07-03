@@ -1,6 +1,5 @@
-import { galleryItems } from './gallery-items.js';
+import { galleryItems } from "./gallery-items.js";
 // Change code below this line
-
 
 const gallery = document.querySelector(".gallery");
 const markup = galleryItems
@@ -18,16 +17,9 @@ const markup = galleryItems
   )
   .join("");
 
-  gallery.insertAdjacentHTML("afterbegin",markup);
+gallery.insertAdjacentHTML("afterbegin", markup);
 
-  gallery.addEventListener("click", (event) => {
-
-       event.preventDefault();
-
-       new SimpleLightbox('.gallery a', {  // В шаблоні змінна, але не зрозумів, навіщо вона, якщо ми її не використовуемо.
-        
-        captionsData: "alt",
-        captionsDelay:250,
-     });
-  
-  })
+new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionsDelay: 250,
+});
